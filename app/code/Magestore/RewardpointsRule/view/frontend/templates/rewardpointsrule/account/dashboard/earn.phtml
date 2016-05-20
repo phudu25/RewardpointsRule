@@ -1,0 +1,37 @@
+<?php $_catalogEarning  = $this->getCatalogRules() ?>
+<?php $_salesEarning    = $this->getShoppingCartRules() ?>
+
+<?php if (count($_catalogEarning) || count($_salesEarning)): ?>
+    <!--strong class="rewardpoints-money rewardpoints-title-rate"><?php echo __('How to earn points:') ?></strong><br /-->
+    <ul class="rewardpoints-dashboard-ul">
+        <?php foreach ($_catalogEarning as $_rule){ ?>
+            <li>
+                <span class="rewardpointsrule-rule-name-policy"><?php echo $_rule->getName() ?></span>
+                <?php if($_rule->getDescription()): ?>
+                    <span class="rewardpointsrule-rule-description-policy"><?php echo ': '.$this->proccessEditor($_rule->getDescription()) ?></span>
+                <?php endif; ?>
+                <?php if ($_rule->getToDate()): ?>
+                    <br/>
+                    <span class="rewardpointsrule-rule-date-policy">
+            <?php echo __('It is valid until %1', $this->formatDate($_rule->getToDate(), \IntlDateFormatter::MEDIUM)) ?>
+        </span>
+                <?php endif ?>
+            </li>
+        <?php } ?>
+
+        <?php foreach ($_salesEarning as $_rule): ?>
+            <li>
+                <span class="rewardpointsrule-rule-name-policy"><?php echo $_rule->getName() ?></span>
+                <?php if($_rule->getDescription()): ?>
+                    <span class="rewardpointsrule-rule-description-policy"><?php echo ': '.$this->proccessEditor($_rule->getDescription()) ?></span>
+                <?php endif; ?>
+                <?php if ($_rule->getToDate()): ?>
+                    <br/>
+                    <span class="rewardpointsrule-rule-date-policy">
+                <?php echo __('It is valid until %1', $this->formatDate($_rule->getToDate(), \IntlDateFormatter::MEDIUM)) ?>
+        </span>
+                <?php endif ?>
+            </li>
+        <?php endforeach ?>
+    </ul>
+<?php endif ?>

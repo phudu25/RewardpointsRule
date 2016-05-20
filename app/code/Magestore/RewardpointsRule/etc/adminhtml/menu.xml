@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Magestore_RewardpointsRule::Earning_Catalog"
+             title="Catalog Earning Rules" module="Magestore_RewardpointsRule"
+             sortOrder="20" parent="Magestore_Rewardpoints::Earning"
+             action="rewardpoints/earning_catalog"
+             resource="Magestore_RewardpointsRule::Earning_Catalog"/>
+
+        <add id="Magestore_RewardpointsRule::Earning_Sales"
+             title="Shopping Cart Earning Rules" module="Magestore_RewardpointsRule"
+             sortOrder="30" parent="Magestore_Rewardpoints::Earning"
+             action="rewardpoints/earning_sales"
+             resource="Magestore_RewardpointsRule::Earning_Sales"/>
+
+        <add id="Magestore_RewardpointsRule::Earning_Individual"
+             title="Manage Earning Points By Product" module="Magestore_RewardpointsRule"
+             sortOrder="40" parent="Magestore_Rewardpoints::Earning"
+             action="rewardpoints/earning_individual"
+             resource="Magestore_RewardpointsRule::Earning_Individual"/>
+
+        <add id="Magestore_RewardpointsRule::Spending_Catalog"
+             title="Catalog Spending Rules"
+             module="Magestore_RewardpointsRule"
+             sortOrder="20" parent="Magestore_Rewardpoints::Spending"
+             action="rewardpoints/spending_catalog"
+             resource="Magestore_RewardpointsRule::Spending_Catalog"/>
+
+        <add id="Magestore_RewardpointsRule::Spending_Sales"
+             title="Shopping Cart Spending Rules"
+             module="Magestore_RewardpointsRule"
+             sortOrder="30" parent="Magestore_Rewardpoints::Spending"
+             action="rewardpoints/spending_sales"
+             resource="Magestore_RewardpointsRule::Spending_Sales"/>
+
+        <add id="Magestore_RewardpointsRule::Spending_Individual"
+             title="Manage Spending Points By Product"
+             module="Magestore_RewardpointsRule"
+             sortOrder="40" parent="Magestore_Rewardpoints::Spending"
+             action="rewardpoints/spending_individual"
+             resource="Magestore_RewardpointsRule::Spending_Individual"/>
+    </menu>
+</config>

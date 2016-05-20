@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Magestore_Rewardpoints::css/rewardpoints.css"/>
+    </head>
+    <body>
+        <referenceBlock name="rewardpoints.dashboard.earn">
+            <block class="Magestore\RewardpointsRule\Block\Account\Dashboard\Earn" name="earning.rules" template="rewardpointsrule/account/dashboard/earn.phtml" />
+        </referenceBlock>
+        <referenceBlock name="rewardpoints.dashboard.spend">
+            <block class="Magestore\RewardpointsRule\Block\Account\Dashboard\Spend" name="spending.rules" template="rewardpointsrule/account/dashboard/spend.phtml" />
+        </referenceBlock>
+    </body>
+</page>

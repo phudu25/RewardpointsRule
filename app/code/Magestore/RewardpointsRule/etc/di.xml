@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magestore\RewardpointsRule\Model\ResourceModel\Earning\Catalog\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">rewardpoints_earning_catalog</argument>
+            <argument name="resourceModel" xsi:type="string">Magestore\RewardpointsRule\Model\ResourceModel\Earning\Catalog</argument>
+        </arguments>
+    </type>
+    <type name="Magestore\RewardpointsRule\Model\ResourceModel\Earning\Sales\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">rewardpoints_earning_sales</argument>
+            <argument name="resourceModel" xsi:type="string">Magestore\RewardpointsRule\Model\ResourceModel\Earning\Sales</argument>
+        </arguments>
+    </type>
+    <type name="Magestore\RewardpointsRule\Model\ResourceModel\Spending\Catalog\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">rewardpoints_spending_catalog</argument>
+            <argument name="resourceModel" xsi:type="string">Magestore\RewardpointsRule\Model\ResourceModel\Spending\Catalog</argument>
+        </arguments>
+    </type>
+    <type name="Magestore\RewardpointsRule\Model\ResourceModel\Spending\Sales\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">rewardpoints_spending_sales</argument>
+            <argument name="resourceModel" xsi:type="string">Magestore\RewardpointsRule\Model\ResourceModel\Spending\Sales</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="rewardpoints_earning_catalog_index_data_source" xsi:type="string">Magestore\RewardpointsRule\Model\ResourceModel\Earning\Catalog\Grid\Collection</item>
+                <item name="rewardpoints_earning_sales_index_data_source" xsi:type="string">Magestore\RewardpointsRule\Model\ResourceModel\Earning\Sales\Grid\Collection</item>
+                <item name="rewardpoints_spending_catalog_index_data_source" xsi:type="string">Magestore\RewardpointsRule\Model\ResourceModel\Spending\Catalog\Grid\Collection</item>
+                <item name="rewardpoints_spending_sales_index_data_source" xsi:type="string">Magestore\RewardpointsRule\Model\ResourceModel\Spending\Sales\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
+

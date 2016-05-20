@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+<update handle="editor"/>
+<body>
+    <referenceContainer name="content">
+        <block class="Magestore\RewardpointsRule\Block\Adminhtml\Spending\Catalog\Edit" name="catalog_spending_form_container"/>
+    </referenceContainer>
+    <referenceContainer name="left">
+        <block class="Magestore\RewardpointsRule\Block\Adminhtml\Spending\Catalog\Edit\Tabs" name="catalog_spending_edit_tab">
+        </block>
+    </referenceContainer>
+</body>
+</page>

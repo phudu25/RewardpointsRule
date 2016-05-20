@@ -1,0 +1,49 @@
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../Backend/etc/system_file.xsd">
+    <system>
+        <tab id="magestore" translate="label" sortOrder="1">
+            <label>Magestore Extension</label>
+        </tab>
+        <section id="rewardpoints" translate="label" sortOrder="1" showInDefault="1"
+                 showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Reward Points</label>
+            <tab>magestore</tab>
+            <resource>Magestore_Rewardpoints::config_rewardpoints</resource>
+
+            <!-- Create rewardpointsrule Configuration-->
+            <group id="rewardpointsrule" translate="label" type="text" sortOrder="100" showInDefault="1"
+                   showInWebsite="1" showInStore="1">
+                <label>Rules Plugin Configuration</label>
+
+                <field id="enable" translate="label comment" type="select" sortOrder="10"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Rules Plugin</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment></comment>
+                </field>
+                <field id="earning_description_view" translate="label comment" type="select" sortOrder="20"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Earning Rule On Shopping Cart Page</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment></comment>
+                </field>
+            </group>
+
+            <!-- Create Display Configuration-->
+            <group id="display" translate="label" type="text" sortOrder="40" showInDefault="1"
+                   showInWebsite="1" showInStore="1">
+                <label>Display Configuration</label>
+
+                <field id="product_listing" translate="label comment" type="select" sortOrder="55"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>On Product Listing Page</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>On Category and Search Result Page</comment>
+                </field>
+            </group>
+
+        </section>
+    </system>
+</config>
